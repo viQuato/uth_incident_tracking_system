@@ -174,12 +174,7 @@ if(isset($_GET['forget'])) {
 
             </div>
             <div class='control-group'>            
-              <div class='control-label'>
-                <label for='r'>Remember Me</label>
-              </div>
-              <div class='controls'>              
-                <input type='checkbox' name='r' value='1' id='r'>
-              </div>
+
             </div>
 
             <input type='hidden' name='token' value='".$_SESSION['token']."'>

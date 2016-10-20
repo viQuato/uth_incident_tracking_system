@@ -26,17 +26,17 @@ if($_POST && isset($_SESSION['token']) && ($_SESSION['token'] == $_POST['token']
   $password = $_POST['password'];
 
 
-  if(!isset($name[3]) || isset($name[30]))
-    $page->error = "Username too short or too long !";
+  if(!isset($name[2]) || isset($name[31]))
+    $page->error = "Username should be between 3 and 30 characters long !";
 
   if(!$options->validUsername($name))
     $page->error = "Invalid username !";
 
-  if(!isset($display_name[3]) || isset($display_name[50]))
-    $page->error = "Display name too short or too long !";
+  if(!isset($display_name[2]) || isset($display_name[51]))
+    $page->error = "Display name should be between 3 and 50 characters long !";
 
-  if(!isset($password[3]) || isset($password[30]))
-    $page->error = "Password too short or too long !";
+  if(!isset($password[2]) || isset($password[31]))
+    $page->error = "Password should be between 3 and 30 characters long !";
 
   if(!$options->isValidMail($email))
     $page->error = "Email address is not valid.";

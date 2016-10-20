@@ -21,7 +21,7 @@
 					<table class="tg" border="1" align="center" cellspacing="0" cellpadding="0" width="1200">
 							<tr>
 								<th width="192" rowspan="3" ><img src="1Zambia.jpg" width="150" height="150" /></th>
-								<th class="tg-yw4l" colspan="9" bgcolor="grey"><h3>THE UNIVERSITY TEACHING HOSPITAL LABORATORY</h3>
+								<th class="tg-yw4l" colspan="9" bgcolor="grey"><h3>THE UNIVERSITY TEACHING HOSPITAL LABORATORY </h3>
 								<p>&nbsp;</p></th>
 								<th width="195" rowspan="3" ><img src="1Zambia.jpg" width="150" height="150" /></th>
 							</tr>
