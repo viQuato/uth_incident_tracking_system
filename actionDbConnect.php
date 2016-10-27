@@ -1,5 +1,5 @@
 <?php
-	include "connect2.php";
+	include "databaseConnection.php";
 	$c_review = $_POST['correctiveReview'];
 	$eff_name = $_POST['effectiveName'];
 	$eff_Date = $_POST['effectiveDate'];

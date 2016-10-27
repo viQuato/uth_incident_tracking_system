@@ -17,7 +17,7 @@
 		<div class=\"container\">
 
 			<div class=\"hero-unit\">
-				<form  action= "databaseConnect.php" method="Post">
+				<form action= "labTechnicianModel.php" method="Post">
 					<table class="tg" border="1" align="center" width="1200">
 						<tr>
 							<th width="192" rowspan="3" ><img src="1Zambia.jpg" width="150" height="150" /></th>

@@ -1,6 +1,6 @@
 <?php
 
-	include ('connect2.php');
+	include('databaseConnection.php');
 	$form_id = $_POST['documentId'];
 	$ref_num = $_POST['refId'];
 	$inv_date = $_POST['dateOfInv'];

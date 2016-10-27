@@ -14,7 +14,7 @@ $presets->setActive("home"); // we highlith the home link
 include 'header.php';
 if($user->group->type == 1) {
 
-   include 'main.php';
+   include 'labTechnicianForm.php';
 
 }else if($user->group->type == 2){
 	include "displaydata.php";

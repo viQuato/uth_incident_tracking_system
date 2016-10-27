@@ -13,7 +13,7 @@
 	<body>
 	<?php
 		include 'header.php';
-		include ('connect2.php');
+		include('databaseConnection.php');
 		$id=$_GET['id'];
 		$result = mysql_query("SELECT * FROM analysis WHERE form_id = '$id' ", $db);
 		if (!$result) 

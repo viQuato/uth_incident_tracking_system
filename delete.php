@@ -1,5 +1,5 @@
 <?php
-	include('connect2.php');
+	include('databaseConnection.php');
 	$id=$_GET['id'];
 	
 	$result = mysql_query("DELETE FROM complaints WHERE complaints.form_id = '$id'");

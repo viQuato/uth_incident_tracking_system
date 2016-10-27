@@ -4,7 +4,7 @@
 		
 			<?php
 			$id=$_GET['id'];
-			include ('connect2.php');
+			include('databaseConnection.php');
 			
 		
 
