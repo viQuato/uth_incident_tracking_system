@@ -1,7 +1,6 @@
 <?php
 
 include('databaseConnection.php');
-$ref_num = $_POST['refId'];
 $inc_time = $_POST['incidentTime'];
 $inc_date = $_POST['dateOfIncident'];
 $lab_unit = $_POST['labUnit'];
@@ -34,8 +33,8 @@ if (isset($_POST['submit'])) {
         if (!empty($_POST['category'])) {
 
             $compln = json_encode($_POST['category']);
-            $result = mysql_query("INSERT INTO complaints(mismatch,form_id) 
-				VALUES ('$compln','$form_id')", $db);
+            $result = mysql_query("INSERT INTO complaints(mismatch,ref_number) 
+				VALUES ('$compln','$ref_num')", $db);
 
 
             if (!$result) {
@@ -48,8 +47,8 @@ if (isset($_POST['submit'])) {
 
 
             $rep = json_encode($_POST['report']);
-            $result = mysql_query("INSERT INTO report_col(incorrect_results,form_id) 
-				VALUES ('$rep','$form_id')", $db);
+            $result = mysql_query("INSERT INTO report_col(incorrect_results,ref_number) 
+				VALUES ('$rep','$ref_num')", $db);
 
 
             if (!$result) {
@@ -60,8 +59,8 @@ if (isset($_POST['submit'])) {
 
         if (!empty($_POST['QC/EQA'])) {
             $qc_eqa = json_encode($_POST['QC/EQA']);
-            $result = mysql_query("INSERT INTO qc_eqa(unacceptable_results,form_id) 
-				VALUES ('$qc_eqa','$form_id')", $db);
+            $result = mysql_query("INSERT INTO qc_eqa(unacceptable_results,ref_number) 
+				VALUES ('$qc_eqa','$ref_num')", $db);
             if (!$result) {
                 die("Database query failed: " . mysql_error());
             }
@@ -69,8 +68,8 @@ if (isset($_POST['submit'])) {
 
         if (!empty($_POST['supplies'])) {
             $sup = json_encode($_POST['supplies']);
-            $result = mysql_query("INSERT INTO supplies(external_problem,form_id) 
-				VALUES ('$sup','$form_id')", $db);
+            $result = mysql_query("INSERT INTO supplies(external_problem,ref_number) 
+				VALUES ('$sup','$ref_num')", $db);
 
 
             if (!$result) {
@@ -79,8 +78,8 @@ if (isset($_POST['submit'])) {
         }
         if (!empty($_POST['complaints'])) {
             $clin = json_encode($_POST['complaints']);
-            $result = mysql_query("INSERT INTO complaints_by(clinician,form_id) 
-				VALUES ('$clin','$form_id')", $db);
+            $result = mysql_query("INSERT INTO complaints_by(clinician,ref_number) 
+				VALUES ('$clin','$ref_num')", $db);
             if (!$result) {
                 die("Database query failed: " . mysql_error());
             }
@@ -90,8 +89,8 @@ if (isset($_POST['submit'])) {
 
             $comp = json_encode($_POST['computer']);
 
-            $result = mysql_query("INSERT INTO computer(software_failure,form_id) 
-				VALUES ('$comp','$form_id')", $db);
+            $result = mysql_query("INSERT INTO computer(software_failure,ref_number) 
+				VALUES ('$comp','$ref_num')", $db);
 
 
             if (!$result) {
@@ -103,8 +102,8 @@ if (isset($_POST['submit'])) {
         if (!empty($_POST['equipment'])) {
             $equip = json_encode($_POST['equipment']);
 
-            $result = mysql_query("INSERT INTO equipment(mulfunction,form_id) 
-				VALUES ('$equip','$form_id')", $db);
+            $result = mysql_query("INSERT INTO equipment(mulfunction,ref_number) 
+				VALUES ('$equip','$ref_num')", $db);
 
 
             if (!$result) {
@@ -115,8 +114,8 @@ if (isset($_POST['submit'])) {
 
         if (!empty($_POST['safety'])) {
             $safe = json_encode($_POST['safety']);
-            $result = mysql_query("INSERT INTO safety(biological,form_id) 
-				VALUES ('$safe','$form_id')", $db);
+            $result = mysql_query("INSERT INTO safety(biological,ref_number) 
+				VALUES ('$safe','$ref_num')", $db);
 
 
             if (!$result) {
@@ -126,8 +125,8 @@ if (isset($_POST['submit'])) {
         if (!empty($_POST['others'])) {
             $other = json_encode($_POST['others']);
 
-            $result = mysql_query("INSERT INTO other(other,form_id) 
-				VALUES ('$other','$form_id')", $db);
+            $result = mysql_query("INSERT INTO other(other,ref_number) 
+				VALUES ('$other','$ref_num')", $db);
 
 
             if (!$result) {
@@ -152,6 +151,6 @@ if (isset($_POST['submit'])) {
 ?>
 <?php
 //Step5
-mysql_close($db);
+mysqli_close($db);
 include "index.php";
 ?>

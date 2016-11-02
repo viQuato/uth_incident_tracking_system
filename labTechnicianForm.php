@@ -5,10 +5,11 @@
 
     <title>UTH Incident Tracking System</title>
 
-    <!-- Bootstrap Core CSS -->
+    <link href="css/dropdown.css" type="text/css" rel="stylesheet">
 
 </head>
 <body>
+<script src="js/dropdown.js"></script>
 <div class=\"container\">
 
     <div class=\"hero-unit\">
@@ -35,19 +36,108 @@
 
             </table>
 
-            <table border="1" cellspacing="0" cellpadding="0" align="center">
+            <table border="1" cellspacing="0" cellpadding="5" align="center">
                 <tr>
                     <td width="300" height="30" align="center"><h3><input type="radio" name="action" value="corrective">Corrective
                             Action
                             <br><input type="radio" name="action" value="preventive">Preventive Action</h3></td>
                     <td width="300" height="30" align="center" bgcolor="#D3D3D3"><h3>Reference No.</h3></td>
-                    <td width="300" height="30"><h3>
-                            <input type="text" name="refId" id="refId" value="<?php echo uniqid(); ?>">
-                        </h3></td>
+                    <td width="300" height="30"><h3 align="center"><?php $refID = 1;
+                            echo "NCE" . $refID; ?></h3></td>
                 </tr>
                 </br>
+
             </table>
             </br>
+            <table border="0" cellspacing="20" cellpadding="20" align="center">
+                <tr>
+                    <td>
+                        <div class="dropdown">
+                            <button onclick="dropDown(1)" class="dropbtn" type="button">Specimen Management</button>
+                            <div id="specimen_management" class="dropdown-content">
+                                <select multiple>
+                                    <option>Request form incompletely filled</option>
+                                    <option>Request form/sample not completed</option>
+                                    <option>Mismatched request form/sample</option>
+                                    <option>Specimen Lost</option>
+                                    <option>Specimen Labeling</option>
+                                    <option>Damaged Specimen</option>
+                                    <option>Specimen Transport delayed</option>
+                                    <option>Specimen packaged wrongly</option>
+                                    <option>Incorrect Processing</option>
+                                    <option>Specimen delivered to wrong Unit</option>
+                                </select>
+                            </div>
+                        </div>
+                    </td>
+
+                    <td>
+                        <div class="dropdown">
+                            <button onclick="dropDown(2)" class="dropbtn" type="button">Reporting</button>
+                            <div id="reporting" class="dropdown-content">
+                                <select multiple>
+                                    <option>Incorrect results reported</option>
+                                    <option>Incorrect report issued</option>
+                                    <option>Incorrect results transcribed</option>
+                                    <option>Computer entry error</option>
+                                    <option>Delay in reporting results</option>
+                                    <option>Delay in authorizing results</option>
+                                    <option>Critical report not released promptly</option>
+                                    <option>Wrong report caught just before release</option>
+                                </select>
+                            </div>
+                        </div>
+                    </td>
+
+                    <td>
+                        <div class="dropdown">
+                            <button onclick="dropDown(3)" class="dropbtn" type="button">QC/EQA</button>
+                            <div id="qc_eqa" class="dropdown-content">
+                                <select multiple>
+                                    <option>Unacceptable QC /EQA result</option>
+                                    <option>EQA result not sent/sent late</option>
+                                    <option>EQA materials not delivered</option>
+                                    <option>EQA materials delivered late</option>
+                                    <option>QC materials delivered late</option>
+                                    <option>Test results verified without QC</option>
+                                </select>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div class="dropdown">
+                            <button onclick="dropDown(4)" class="dropbtn" type="button">Supplies</button>
+                            <div id="supplies" class="dropdown-content">
+                                <select multiple>
+                                    <option>External problem</option>
+                                    <option>Improperly prepared reagent</option>
+                                    <option>Reagent Expiry</option>
+                                    <option>Recalled lot</option>
+                                    <option>Change in lot number overlooked</option>
+                                </select>
+                            </div>
+                        </div>
+                    </td>
+
+                    <td>
+                        <div class="dropdown">
+                            <button onclick="dropDown(5)" class="dropbtn" type="button">Complaints</button>
+                            <div id="complaints" class="dropdown-content">
+                                <select multiple>
+                                    <option>Complaint by clinician</option>
+                                    <option>Complaint by patient</option>
+                                    <option>Complaint by staff member</option>
+                                    <option>Complaint by patient’s relative</option>
+                                </select>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <br>
             <table border="1" align="center" cellspacing="0" cellpadding="0" width="1200">
                 <tr>
                     <td colspan="3" bgcolor="#D3D3D3"><h3>SPECIMEN MANAGEMENT</h3></td>

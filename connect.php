@@ -3,7 +3,7 @@
 $db_host		= 'localhost';
 $db_user		= 'root';
 $db_pass		= '';
-$db_database	= 'categories'; 
+$db_database	= 'uth_incident_tracking';
 
 /* End config */
 
