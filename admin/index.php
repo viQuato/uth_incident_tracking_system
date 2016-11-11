@@ -49,6 +49,7 @@ include "../header.php";
     <ul class="nav nav-list">
       <li class="nav-header">ADMIN OPTIONS</li>
       <li class='active'><a href='?'>General Settings</a></li>
+      <li><a href="register.php">Create Account</a></li>
       <li><a href='groups.php'>Groups Management</a></li>
     </ul>
    </div><!--/.well -->
@@ -76,8 +77,8 @@ echo "
   <form class='form-horizontal' action='#' method='post'>
       <fieldset>
 
-      <legend>General Settings</legend>";
-
+      <h3>General Settings</h3>
+        <hr/>";
 
 foreach ($columns as $key => $value) {
   $safe_name = $options->html($key);

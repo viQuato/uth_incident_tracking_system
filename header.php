@@ -100,7 +100,6 @@ echo "</ul>";
 if(!$user->islg()) { 
 
 echo "<span class='pull-right'>
-        <a href='$set->url/register.php' class='btn btn-primary btn-small'>Sign Up</a>
         <a href='$set->url/login.php' class='btn btn-small'>Login</a>
         
     </span>

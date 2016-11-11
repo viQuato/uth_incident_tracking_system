@@ -28,7 +28,7 @@ class presets {
                       "id" => "analysis");
 	  
 	
-	  if($user->group->type != 3) // we make it invisible for admins only
+	  if($user->group->type != 3 && $user->group->type != 2) // we make it invisible for admins only
       $var[] = array("item",
                       array("href" => $set->url."/contact.php",
                             "name" => "Contact",
@@ -37,14 +37,14 @@ class presets {
 					  
 	
 		
-	  if($user->group->type == 3) // we make it visible for admins only
+	  if($user->group->type >= 2) // we make it visible for admins only
 	  $var[] = array("item",
                       array("href" => $set->url."/users_list.php",
                             "name" => "User List",
                             "class" => $this->isActive("userslist")),
                       "id" => "userslist");
             
-      if($user->group->type == 3) // we make it visible for admins only
+      if($user->group->type >= 2) // we make it visible for admins only
       $var[] = array("item",
                       array("href" => $set->url."/admin",
                             "name" => "Admin Panel",

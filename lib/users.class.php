@@ -193,7 +193,7 @@ class User {
 	 */
 	function isAdmin($userid = 0) {
 		if(!$userid)
-			if($this->group->type >= 3)
+			if($this->group->type >= 2)
 				return TRUE;
 			else
 				return FALSE;

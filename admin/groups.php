@@ -129,6 +129,7 @@ include "../header.php";
     <ul class="nav nav-list">
       <li class="nav-header">ADMIN OPTIONS</li>
       <li><a href='index.php'>General Settings</a></li>
+      <li><a href="register.php">Create Account</a></li>
       <li class='active'><a href='groups.php'>Groups Management</a></li>
     </ul>
    </div><!--/.well -->

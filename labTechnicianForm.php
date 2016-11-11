@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 <head>
 
 
@@ -49,316 +49,226 @@
 
             </table>
             </br>
-            <table border="0" cellspacing="20" cellpadding="20" align="center">
+            <table border="0" cellspacing=20" cellpadding="30" align="center">
                 <tr>
                     <td>
                         <div class="dropdown">
-                            <button onclick="dropDown(1)" class="dropbtn" type="button">Specimen Management</button>
+                            <h4><input onclick="dropDown(1)" type="radio" name="category" class="dropbtn">Specimen
+                                Management</h4>
                             <div id="specimen_management" class="dropdown-content">
-                                <select multiple>
-                                    <option>Request form incompletely filled</option>
-                                    <option>Request form/sample not completed</option>
-                                    <option>Mismatched request form/sample</option>
-                                    <option>Specimen Lost</option>
-                                    <option>Specimen Labeling</option>
-                                    <option>Damaged Specimen</option>
-                                    <option>Specimen Transport delayed</option>
-                                    <option>Specimen packaged wrongly</option>
-                                    <option>Incorrect Processing</option>
-                                    <option>Specimen delivered to wrong Unit</option>
-                                </select>
+                                <h5><input type="checkbox" name="category[]" value="Request form incompletely filled">Request
+                                    form incompletely filled</h5>
+                                <h5><input type="checkbox" name="category[]" value="Request form/sample not received">Request
+                                    form/sample not received</h5>
+                                <h5><input type="checkbox" name="category[]" value="Mismatched request form/sample">Mismatched
+                                    request form/sample</h5>
+                                <h5><input type="checkbox" name="category[]" value="Specimen Lost">Specimen Lost</h5>
+                                <h5><input type="checkbox" name="category[]" value="Specimen Labeling">Specimen
+                                    Labeling</h5>
+                                <h5><input type="checkbox" name="category[]" value="Damaged Specimen">Damaged
+                                    Specimen</h5>
+                                <h5><input type="checkbox" name="category[]"
+                                           value="Specimen Transport delayed">Specimen Transport delayed </h5>
+                                <h5><input type="checkbox" name="category[]"
+                                           value="Specimen packaged wrongly">Specimen packaged wrongly</h5>
+                                <h5><input type="checkbox" name="category[]"
+                                           value="Incorrect Processing">Incorrect Processing</h5>
+                                <h5><input type="checkbox" name="category[]"
+                                           value="Specimen delivered to wrong Unit">Specimen
+                                    delivered to wrong Unit</h5>
+                                <h5><input type="checkbox" name="category[]"><input
+                                        type="text" placeholder="Other"
+                                        id="specimenOther"></h5>
                             </div>
                         </div>
                     </td>
 
                     <td>
                         <div class="dropdown">
-                            <button onclick="dropDown(2)" class="dropbtn" type="button">Reporting</button>
+                            <h4><input onclick="dropDown(2)" type="radio" name="category" class="dropbtn">Reporting</h4>
                             <div id="reporting" class="dropdown-content">
-                                <select multiple>
-                                    <option>Incorrect results reported</option>
-                                    <option>Incorrect report issued</option>
-                                    <option>Incorrect results transcribed</option>
-                                    <option>Computer entry error</option>
-                                    <option>Delay in reporting results</option>
-                                    <option>Delay in authorizing results</option>
-                                    <option>Critical report not released promptly</option>
-                                    <option>Wrong report caught just before release</option>
-                                </select>
-                            </div>
-                        </div>
-                    </td>
-
-                    <td>
-                        <div class="dropdown">
-                            <button onclick="dropDown(3)" class="dropbtn" type="button">QC/EQA</button>
-                            <div id="qc_eqa" class="dropdown-content">
-                                <select multiple>
-                                    <option>Unacceptable QC /EQA result</option>
-                                    <option>EQA result not sent/sent late</option>
-                                    <option>EQA materials not delivered</option>
-                                    <option>EQA materials delivered late</option>
-                                    <option>QC materials delivered late</option>
-                                    <option>Test results verified without QC</option>
-                                </select>
-                            </div>
-                        </div>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <div class="dropdown">
-                            <button onclick="dropDown(4)" class="dropbtn" type="button">Supplies</button>
-                            <div id="supplies" class="dropdown-content">
-                                <select multiple>
-                                    <option>External problem</option>
-                                    <option>Improperly prepared reagent</option>
-                                    <option>Reagent Expiry</option>
-                                    <option>Recalled lot</option>
-                                    <option>Change in lot number overlooked</option>
-                                </select>
-                            </div>
-                        </div>
-                    </td>
-
-                    <td>
-                        <div class="dropdown">
-                            <button onclick="dropDown(5)" class="dropbtn" type="button">Complaints</button>
-                            <div id="complaints" class="dropdown-content">
-                                <select multiple>
-                                    <option>Complaint by clinician</option>
-                                    <option>Complaint by patient</option>
-                                    <option>Complaint by staff member</option>
-                                    <option>Complaint by patient’s relative</option>
-                                </select>
-                            </div>
-                        </div>
-                    </td>
-                </tr>
-            </table>
-            <br>
-            <table border="1" align="center" cellspacing="0" cellpadding="0" width="1200">
-                <tr>
-                    <td colspan="3" bgcolor="#D3D3D3"><h3>SPECIMEN MANAGEMENT</h3></td>
-                    <th colspan="3" bgcolor="#D3D3D3"><h3> REPORTING</h3></th>
-                    <th colspan="3" bgcolor="#D3D3D3"><h3> QC/ EQA</h3></th>
-                </tr>
-                <tr>
-                    <td colspan="3" rowspan="3" valign="top">
-                        <h4><input type="checkbox" name="category[]" value="Request form incompletely filled">Request
-                            form incompletely filled
-                            <h4>
-                                <h4><input type="checkbox" name="category[]" value="Request form/sample not received">Request
-                                    form/sample not received</h4>
-                                <h4><input type="checkbox" name="category[]" value="Mismatched request form/sample">Mismatched
-                                    request form/sample
-                                    <h4>
-                                        <h4><input type="checkbox" name="category[]" value="Specimen Lost">Specimen Lost
-                                        </h4>
-                                        <h4><input type="checkbox" name="category[]" value="Specimen Labeling">Specimen
-                                            Labeling
-                                            <h4>
-                                                <h4><input type="checkbox" name="category[]" value="Damaged Specimen">Damaged
-                                                    Specimen</h4>
-                                                <h4><input type="checkbox" name="category[]"
-                                                           value="Specimen Transport delayed">Specimen Transport delayed
-                                                    <h4>
-                                                        <h4><input type="checkbox" name="category[]"
-                                                                   value="Specimen packaged wrongly">Specimen packaged
-                                                            wrongly</h4>
-                                                        <h4><input type="checkbox" name="category[]"
-                                                                   value="Incorrect Processing">Incorrect Processing
-                                                            <h4>
-                                                                <h4><input type="checkbox" name="category[]"
-                                                                           value="Specimen delivered to wrong Unit">Specimen
-                                                                    delivered to wrong Unit</h4>
-                                                                <h4><input type="checkbox" name="category[]"><input
-                                                                        type="text" placeholder="Other"
-                                                                        id="specimenOther"><h4>
-
-
-                    </td>
-                    <td colspan="3" rowspan="3" valign="top">
-                        <h4><input type="checkbox" name="report[]" value="Incorrect results reported">Incorrect results
-                            reported
-                            <h4>
-                                <h4><input type="checkbox" name="report[]" value="Incorrect report issued">Incorrect
-                                    report issued</h4>
-                                <h4><input type="checkbox" name="report[]" value="Incorrect results transcribed">Incorrect
+                                <h5><input type="checkbox" name="report[]" value="Incorrect report issued">Incorrect
+                                    report issued</h5>
+                                <h5><input type="checkbox" name="report[]" value="Incorrect results transcribed">Incorrect
                                     results transcribed
-                                    <h4>
-                                        <h4><input type="checkbox" name="report[]" value="Computer entry error">Computer
-                                            entry error</h4>
-                                        <h4><input type="checkbox" name="report[]" value="Delay in reporting results">Delay
-                                            in reporting results
-                                            <h4>
-                                                <h4><input type="checkbox" name="report[]"
-                                                           value="Delay in authorizing results">Delay in authorizing
-                                                    results</h4>
-                                                <h4><input type="checkbox" name="report[]"
-                                                           value="Critical report not released promptly">Critical report
-                                                    not released promptly
-                                                    <h4>
-                                                        <h4><input type="checkbox" name="report[]"
-                                                                   value="Wrong report caught just before release">Wrong
-                                                            report caught just before release</h4>
-                                                        <h4><input type="checkbox" name="report[]"><input type="text"
-                                                                                                          placeholder="Other"
-                                                                                                          name="reportingOther"
-                                                                                                          id="specimenOther">
-                                                            <h4>
-
+                                </h5>
+                                <h5><input type="checkbox" name="report[]" value="Computer entry error">Computer
+                                    entry error</h5>
+                                <h5><input type="checkbox" name="report[]" value="Delay in reporting results">Delay
+                                    in reporting results
+                                </h5>
+                                <h5><input type="checkbox" name="report[]"
+                                           value="Delay in authorizing results">Delay in authorizing
+                                    results</h5>
+                                <h5><input type="checkbox" name="report[]"
+                                           value="Critical report not released promptly">Critical report
+                                    not released promptly
+                                </h5>
+                                <h5><input type="checkbox" name="report[]"
+                                           value="Wrong report caught just before release">Wrong
+                                    report caught just before release</h5>
+                                <h5><input type="checkbox" name="report[]"><input type="text"
+                                                                                  placeholder="Other"
+                                                                                  name="reportingOther"
+                                                                                  id="specimenOther">
+                                </h5>
+                            </div>
+                        </div>
                     </td>
-                    <td colspan="3" rowspan="3" valign="top">
-                        <h4><input type="checkbox" name="QC/EQA[]" value="Unacceptable QC /EQA result">Unacceptable QC
-                            /EQA result
-                            <h4>
-                                <h4><input type="checkbox" name="QC/EQA[]" value="EQA result not sent/sent late">EQA
-                                    result not sent/sent late</h4>
-                                <h4><input type="checkbox" name="QC/EQA[]" value="EQA materials not delivered">EQA
+
+                    <td>
+                        <div class="dropdown">
+                            <h4><input onclick="dropDown(3)" type="radio" name="category" class="dropbtn">QC/EQA</h4>
+                            <div id="qc_eqa" class="dropdown-content">
+                                <h5><input type="checkbox" name="QC/EQA[]" value="EQA result not sent/sent late">EQA
+                                    result not sent/sent late</h5>
+                                <h5><input type="checkbox" name="QC/EQA[]" value="EQA materials not delivered">EQA
                                     materials not delivered
-                                    <h4>
-                                        <h4><input type="checkbox" name="QC/EQA[]" value="EQA materials delivered late">EQA
-                                            materials delivered late</h4>
-                                        <h4><input type="checkbox" name="QC/EQA[]" value="QC materials delivered late">QC
-                                            materials delivered late
-                                            <h4>
-                                                <h4><input type="checkbox" name="QC/EQA[]"
-                                                           value="Test results verified without QC">Test results
-                                                    verified without QC</h4>
-                                                <h4><input type="checkbox" name="QC/EQA[]"><input type="text"
-                                                                                                  placeholder="Other"
-                                                                                                  name="qcOther"
-                                                                                                  id="specimenOther">
-                                                    <h4>
+                                </h5>
+                                <h5><input type="checkbox" name="QC/EQA[]" value="EQA materials delivered late">EQA
+                                    materials delivered late</h5>
+                                <h5><input type="checkbox" name="QC/EQA[]" value="QC materials delivered late">QC
+                                    materials delivered late
+                                </h5>
+                                <h5><input type="checkbox" name="QC/EQA[]"
+                                           value="Test results verified without QC">Test results
+                                    verified without QC</h5>
+                                <h5><input type="checkbox" name="QC/EQA[]"><input type="text"
+                                                                                  placeholder="Other"
+                                                                                  name="qcOther"
+                                                                                  id="specimenOther">
+                                </h5>
+                            </div>
+                            </h4>
+                        </div>
                     </td>
                 </tr>
                 <tr>
-                </tr>
-                <tr>
-                </tr>
-                <tr>
-                    <td colspan="3" bgcolor="#D3D3D3"><h3> SUPPLIES</h3></td>
-                    <td colspan="3" bgcolor="#D3D3D3"><h3> COMPLAINTS</h3></td>
-                    <td colspan="3" bgcolor="#D3D3D3"><h3> COMPUTER</h3></td>
-                </tr>
-                <tr>
-                    <td colspan="3" rowspan="3" valign="top">
-                        <h4><input type="checkbox" name="supplies[]" value="External problem">External problem
-                            <h4>
-                                <h4><input type="checkbox" name="supplies[]" value="Improperly prepared reagent">Improperly
-                                    prepared reagent</h4>
-                                <h4><input type="checkbox" name="supplies[]" value="Reagent Expiry">Reagent Expiry
-                                    <h4>
-                                        <h4><input type="checkbox" name="supplies[]" value="Recalled lot">Recalled lot
-                                        </h4>
-                                        <h4><input type="checkbox" name="supplies[]"
-                                                   value="Change in lot number overlooked">Change in lot number
-                                            overlooked
-                                            <h4>
-                                                <h4><input type="checkbox" name="supplies[]"><input type="text"
-                                                                                                    placeholder="Other"
-                                                                                                    name="suppliesOther"
-                                                                                                    id="specimenOther">
-                                                    <h4>
+                    <td>
+                        <div class="dropdown">
+                            <h4><input onclick="dropDown(4)" type="radio" name="category" class="dropbtn">Supplies</h4>
+                            <div id="supplies" class="dropdown-content">
+                                <h5><input type="checkbox" name="supplies[]" value="External problem">External problem</h5>
+                                <h5><input type="checkbox" name="supplies[]" value="Improperly prepared reagent">Improperly
+                                    prepared reagent</h5>
+                                <h5><input type="checkbox" name="supplies[]" value="Reagent Expiry">Reagent Expiry
+                                </h5>
+                                <h5><input type="checkbox" name="supplies[]" value="Recalled lot">Recalled lot
+                                </h5>
+                                <h5><input type="checkbox" name="supplies[]"
+                                           value="Change in lot number overlooked">Change in lot number
+                                    overlooked
+                                </h5>
+                                <h5><input type="checkbox" name="supplies[]"><input type="text"
+                                                                                    placeholder="Other"
+                                                                                    name="suppliesOther"
+                                                                                    id="specimenOther">
+                                </h5>
+                            </div>
+                        </div>
                     </td>
-                    <td colspan="3" rowspan="3" valign="top">
-                        <h4><input type="checkbox" name="complaints[]" value=" Complaint by clinician"> Complaint by
-                            clinician
-                            <h4>
-                                <h4><input type="checkbox" name="complaints[]" value=" Complaint by patient"> Complaint
-                                    by patient</h4>
-                                <h4><input type="checkbox" name="complaints[]" value=" Complaint by staff member">
+
+                    <td>
+                        <div class="dropdown">
+                            <h4><input onclick="dropDown(5)" type="radio" name="category" class="dropbtn">Complaints</h4>
+                            <div id="complaints" class="dropdown-content">
+                                <h5><input type="checkbox" name="complaints[]" value=" Complaint by clinician">
+                                    Complaint by
+                                    clinician
+                                </h5>
+                                <h5><input type="checkbox" name="complaints[]" value=" Complaint by patient"> Complaint
+                                    by patient</h5>
+                                <h5><input type="checkbox" name="complaints[]" value=" Complaint by staff member">
                                     Complaint by staff member
-                                    <h4>
-                                        <h4><input type="checkbox" name="complaints[]"
-                                                   value=" Complaint by patients relative"> Complaint by patient’s
-                                            relative </h4>
-                                        <h4><input type="checkbox" name="complaints[]"><input type="text"
-                                                                                              placeholder="Other"
-                                                                                              name="qcOther"
-                                                                                              id="complaintOther"><h4>
+                                </h5>
+                                <h5><input type="checkbox" name="complaints[]"
+                                           value=" Complaint by patients relative"> Complaint by patient’s
+                                    relative </h5>
+                                <h5><input type="checkbox" name="complaints[]"><input type="text"
+                                                                                      placeholder="Other"
+                                                                                      name="qcOther"
+                                                                                      id="complaintOther"></h5>
+                            </div>
+                        </div>
                     </td>
-                    <td colspan="3" rowspan="3" valign="top">
-                        <h4><input type="checkbox" name="computer[]" value="LIS-related ">LIS-related <br> (Please fill
-                            in LIS Issues Form LIS-FM-001)
-                            <h4>
-                                <h4><input type="checkbox" name="computer[]" value="Software failure">Software failure
-                                </h4>
-                                <h4><input type="checkbox" name="computer[]" value="Hardware failure">Hardware failure
-                                    <h4>
-                                        <h4><input type="checkbox" name="computer[]"><input type="text"
-                                                                                            placeholder="Other"
-                                                                                            name="computerOther"
-                                                                                            id="specimenOther"><h4>
-                    </td>
-                </tr>
-                <tr>
-                </tr>
-                <tr>
-                </tr>
-                <tr>
-                    <td colspan="3" bgcolor="#D3D3D3"><h3> EQUIPMENT</h3></td>
-                    <td colspan="3" bgcolor="#D3D3D3"><h3> SAFETY</h3></td>
-                    <td colspan="3" bgcolor="#D3D3D3"><h3>OTHERS</h3></td>
-                </tr>
-                <tr>
-                    <td colspan="3" rowspan="3" valign="top">
-                        <h4><input type="checkbox" name="equipment[]" value="Equipment malfunctionv">Equipment
-                            malfunction
-                            <h4>
-                                <h4><input type="checkbox" name="equipment[]" value="Computer hardware problem">Computer
-                                    hardware problem</h4>
-                                <h4><input type="checkbox" name="equipment[]" value="Computer software problem">Computer
-                                    software problem
-                                    <h4>
-                                        <h4><input type="checkbox" name="equipment[]" value="Wrong calibration values">Wrong
-                                            calibration values</h4>
-                                        <h4><input type="checkbox" name="equipment[]" value="Wrong calibrator used">Wrong
-                                            calibrator used
-                                            <h4>
-                                                <h4><input type="checkbox" name="equipment[]"><input type="text"
-                                                                                                     placeholder="Other"
-                                                                                                     name="equipOther"
-                                                                                                     id="specimenOther">
-                                                    <h4>
 
-                    </td>
-                    <td colspan="3" rowspan="3" valign="top">
-                        <h4><input type="checkbox" name="safety[]" value="Biological/Chemical Spill">Biological/Chemical
-                            Spill
-                            <h4>
-                                <h4><input type="checkbox" name="safety[]" value="Fire">Fire</h4>
-                                <h4><input type="checkbox" name="safety[]" value="Waste Management">Waste Management
-                                    <h4>
-                                        <h4><input type="checkbox" name="safety[]" value="Incident/accident">Incident/accident
-                                        </h4>
-                                        <h4><input type="checkbox" name="safety[]"><input type="text"
-                                                                                          placeholder="Other"
-                                                                                          name="qcOther" id="safeOther">
-                                            <h4>
-                    </td>
-                    <td colspan="3" rowspan="3" valign="top">
-                        <h4><input type="checkbox" name="others[]" value="Power interruption">Power interruption
-                            <h4>
-                                <h4><input type="checkbox" name="others[]" value="Water Interruption">Water Interruption
-                                </h4>
-                                <h4><input type="checkbox" name="others[]" value="Temperature out of range">Temperature
-                                    out of range
-                                    <h4>
-                                        <h4><input type="checkbox" name="others[]"><input type="text"
-                                                                                          placeholder="Other"
-                                                                                          name="qcOther"
-                                                                                          id="specimenOther"><h4>
-
+                    <td>
+                        <div class="dropdown">
+                            <h4><input onclick="dropDown(6)" type="radio" name="category" class="dropbtn">Computer</h4>
+                            <div id="computer" class="dropdown-content">
+                                <h5><input type="checkbox" name="computer[]" value="LIS-related ">LIS-related <br>
+                                    (Please fill
+                                    in LIS Issues Form LIS-FM-001)
+                                </h5>
+                                <h5><input type="checkbox" name="computer[]" value="Software failure">Software failure
+                                </h5>
+                                <h5><input type="checkbox" name="computer[]" value="Hardware failure">Hardware failure
+                                </h5>
+                                <h5><input type="checkbox" name="computer[]"><input type="text"
+                                                                                    placeholder="Other"
+                                                                                    name="computerOther"
+                                                                                    id="specimenOther"></h5>
+                            </div>
+                        </div>
                     </td>
                 </tr>
                 <tr>
-                </tr>
-                <tr>
+                    <td>
+                        <h4><input onclick="dropDown(7)" type="radio" name="category" class="dropbtn">Equipment</h4>
+                        <div id="equipment" class="dropdown-content">
+                            <h5><input type="checkbox" name="equipment[]" value="Computer hardware problem">Computer
+                                hardware problem</h5>
+                            <h5><input type="checkbox" name="equipment[]" value="Computer software problem">Computer
+                                software problem
+                            </h5>
+                            <h5><input type="checkbox" name="equipment[]" value="Wrong calibration values">Wrong
+                                calibration values</h5>
+                            <h5><input type="checkbox" name="equipment[]" value="Wrong calibrator used">Wrong
+                                calibrator used
+                            </h5>
+                            <h5><input type="checkbox" name="equipment[]"><input type="text"
+                                                                                 placeholder="Other"
+                                                                                 name="equipOther"
+                                                                                 id="specimenOther">
+                            </h5>
+                        </div>
+                    </td>
+                    <td>
+                        <h4><input onclick="dropDown(8)" type="radio" name="category" class="dropbtn">Safety</h4>
+                        <div id="safety" class="dropdown-content">
+                            <h5><input type="checkbox" name="safety[]" value="Biological/Chemical Spill">Biological/Chemical
+                                Spill
+                            </h5>
+                            <h5><input type="checkbox" name="safety[]" value="Fire">Fire</h5>
+                            <h5><input type="checkbox" name="safety[]" value="Waste Management">Waste Management
+                            </h5>
+                            <h5><input type="checkbox" name="safety[]" value="Incident/accident">Incident/accident
+                            </h5>
+                            <h5><input type="checkbox" name="safety[]"><input type="text"
+                                                                              placeholder="Other"
+                                                                              name="qcOther" id="safeOther">
+                            </h5>
+                        </div>
+                    </td>
+                    <td>
+                        <h4><input onclick="dropDown(9)" type="radio" name="category" class="dropbtn">Others</h4>
+                        <div id="others" class="dropdown-content">
+                            <h5><input type="checkbox" name="others[]" value="Power interruption">Power interruption
+                            </h5>
+                            <h5><input type="checkbox" name="others[]" value="Water Interruption">Water Interruption
+                            </h5>
+                            <h5><input type="checkbox" name="others[]" value="Temperature out of range">Temperature
+                                out of range
+                            </h5>
+                            <h5><input type="checkbox" name="others[]"><input type="text"
+                                                                              placeholder="Other"
+                                                                              name="qcOther"
+                                                                              id="specimenOther"></h5>
+                        </div>
+                    </td>
                 </tr>
             </table>
+
             <br>
             <table border="1" align="center" cellspacing="0" cellpadding="0" width="1200">
                 <tr>
